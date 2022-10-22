@@ -1,0 +1,40 @@
+.leftList {
+  position: relative;
+
+  .listItem {
+    padding: 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid transparent;
+    cursor: pointer;
+    &:hover {
+      border-right-color: blueviolet;
+    }
+
+    &:hover ~ .leftCmps{
+      display: block;
+    }
+  }
+
+  .leftCmps {
+    width: 200px;
+    height: calc(100vh - 70px);
+    background: antiquewhite;
+    position: absolute;
+    z-index: 1000;
+    left: 100%;
+    top: 0;
+    display: none;
+
+    &:hover {
+      display: block;
+    }
+
+    .leftItems {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+  }
+}
